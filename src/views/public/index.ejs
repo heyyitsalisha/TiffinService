@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicious Tiffin | Home-Cooked Meals Delivered</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo">Delicious Tiffin</a>
+            <nav class="navigation">
+                <a href="#about">About</a>
+                <a href="#plans">Meal Plans</a>
+                <a href="#faq">FAQ</a>
+                <a href="/contact">Contact</a>
+                <a href="/admin">Admin</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Fresh, Home-Cooked Meals Delivered Daily</h1>
+            <p>Enjoy delicious and healthy tiffin services at your doorstep. We offer a variety of meal plans to suit
+                your dietary needs and preferences.</p>
+            <a href="#plans" class="btn">Explore Meal Plans</a>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container">
+            <h2>Why Choose Delicious Tiffin?</h2>
+            <div class="about-cards">
+                <div class="card">
+                    <img src="images/about1.jpeg" alt="Fresh Ingredients">
+                    <h3>Fresh & Local Ingredients</h3>
+                    <p>We use only the freshest and locally sourced ingredients to create our delicious meals.</p>
+                </div>
+                <div class="card">
+                    <img src="images/about2.jpeg" alt="Variety of Meals">
+                    <h3>Variety of Meal Plans</h3>
+                    <p>Choose from a variety of meal plans to find one that fits your dietary needs and preferences.</p>
+                </div>
+                <div class="card">
+                    <img src="images/about3.jpeg" alt="Convenient Delivery">
+                    <h3>Convenient Delivery</h3>
+                    <p>Get your tiffin delivered fresh to your doorstep daily, so you can focus on the things that
+                        matter.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+    <section class="plans" id="plans">
+        <div class="container">
+            <h2>Our Meal Plans</h2>
+            <div class="plan-cards">
+                <% plans.forEach(plan =>{ %>
+                    <div class="plan-card">
+                        <img src= "<%= plan.imgUrl %>" alt= <%=plan.name%>>
+                        <h3><%= plan.name %></h3>
+                        <h5>CAD <%= plan.price %> per month</h5>
+                        <p><%= plan.description %></p>
+                        <a href="checkout.html" class="btn">Order Now</a>
+                    </div>
+                <% }) %>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <details>
+                    <summary>What are your delivery areas?</summary>
+                    <p>We currently deliver to [List of delivery areas].</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; Delicious Tiffin. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
+    
